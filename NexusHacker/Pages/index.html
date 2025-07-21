@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <title>NUXESHACKER</title>
+</head>
+<body>
+     <div class="cursor"></div>
+    <div class="bg-grid"></div>
+    <div class="particle-container"></div>
+    
+    <div class="stats">
+        <div class="stat-row"><span>Level:</span><span id="level">1</span></div>
+        <div class="stat-row"><span>Score:</span><span id="score">0</span></div>
+        <div class="stat-row"><span>Time:</span><span id="time">00:00</span></div>
+        <div class="stat-row"><span>Hacked:</span><span id="hacked">0/36</span></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>NEXUS HACKER</h1>
+            <div class="system-status">
+                <div class="status-item"><div class="status-dot online"></div><span>SYSTEM ONLINE</span></div>
+                <div class="status-item"><div class="status-dot warning"></div><span>INTRUSION DETECTED</span></div>
+                <div class="status-item"><div class="status-dot secure"></div><span>ENCRYPTION ACTIVE</span></div>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <h3>COMMAND TERMINAL</h3>
+            <div class="terminal-output" id="terminalOutput">
+                <div style="color: var(--neon-green);">[SYSTEM] Nexus Hacker v2.7.4 initialized...</div>
+                <div style="color: var(--neon-blue);">[INFO] Target network detected: 36 nodes</div>
+                <div style="color: var(--neon-pink);">[WARNING] Security countermeasures active</div>
+                <div style="color: var(--terminal-green);">[READY] Begin infiltration sequence...</div>
+            </div>
+            <div class="terminal-input">
+                <span class="terminal-prompt">nexus@hacker:~$</span>
+                <input type="text" id="terminalInput" placeholder="Enter command..." autocomplete="off">
+            </div>
+        </div>
+
+        <div class="network">
+            <h3>NETWORK MAP</h3>
+            <div class="network-grid" id="networkGrid"></div>
+        </div>
+
+        <div class="security">
+            <h3>SECURITY STATUS</h3>
+            <div class="security-bars">
+                <div class="security-bar">
+                    <span class="security-label">Firewall:</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="firewallProgress" style="width: 100%"></div>
+                    </div>
+                    <span id="firewallText">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="startHack()">INITIATE HACK</button>
+            <button class="control-btn success" onclick="deployVirus()">DEPLOY VIRUS</button>
+            <button class="control-btn" onclick="scanNetwork()">SCAN NETWORK</button>
+            <button class="control-btn danger" onclick="emergencyExit()">EMERGENCY EXIT</button>
+            <button class="control-btn" onclick="resetSystem()">RESET SYSTEM</button>
+        </div>
+    </div>
+
+</body>
+</html>
